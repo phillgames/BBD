@@ -15,7 +15,7 @@
     <div class="collection">
         <div class="menunav">
             <h1 id="topleft" class="topbuttons">
-                what we offer
+                What we offer
             </h1>
             <h1 id="topmid" class="topbuttons">
                 Our consultants
