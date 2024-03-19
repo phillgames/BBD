@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="collection" onmouseover="menuDown()" onmouseleave="menuUp()" id="navbar">
+    <div class="collection">
         <div class="menunav">
             <h1 id="topleft" class="topbuttons">
                 what we offer
@@ -23,11 +23,11 @@
             <h1 id="topright" class="topbuttons">
                 about us
             </h1>
-            <h1 id="topright" class="topbuttons">
-                Log in
+            <a href="login.php" id="topright" class="topbuttons">
+                Log in / Signup
             </a>
         </div>
-        <div class="dropdown" >
+        <div class="dropdown" onclick="menuToggle()">
             <img  class="arrow" src="Imgs/Dropdown-arrow.svg" alt="">
         </div>
     </div>
