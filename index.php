@@ -23,7 +23,7 @@
             <h1 id="topright" class="topbuttons">
                 about us
             </h1>
-            <a id="topright" class="topbuttons">
+            <a href="login.php" id="topright" class="topbuttons">
                 Log in
             </a>
         </div>
