@@ -50,7 +50,7 @@ body {
     flex-direction: row;
     font-family: sofachrome;
     font-size: 80%;
-    cursor: pointer;
+
 }
 
 
@@ -60,6 +60,7 @@ body {
     color: white;
     margin: 2%;
     flex: 1;
+    cursor: pointer;
 }
 
 #topmid{
@@ -76,7 +77,8 @@ body {
 
 .arrow {
     height: 35%;
-    cursor: pointer;
+    /* cursor: pointer; */
+    z-index: -1;
 
 }
 
