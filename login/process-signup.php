@@ -1,7 +1,7 @@
 <?php
 
-if (empty($_POST["name"])) {
-    die("Name is required");
+if (empty($_POST["username"])) {
+    die("username is required");
 }
 
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
@@ -25,11 +25,11 @@ if ($_POST["password"] !== $_POST["password_confirmation"]) {
 }
 
 
-$password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+$password_hash = password_hash($_POST["password"], PASSWORD_BCRYPT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$sql = "INSERT INTO user (name, email, password_hash)
+$sql = "INSERT INTO users (username, email, password)
         VALUES (?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
@@ -39,7 +39,7 @@ if ( ! $stmt->prepare($sql)) {
 }
 
 $stmt->bind_param("sss",
-                $_POST["name"],
+                $_POST["username"],
                 $_POST["email"],
                 $password_hash);
 
